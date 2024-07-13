@@ -2,10 +2,14 @@
   "name": "nodejs-testes-unitarios-integracao",
   "version": "1.0.0",
   "description": "",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "eslint": "npx eslint index.js"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --watch",
+    "test:coverage": "node --experimental-vm-modules node_modules/jest/bin/jest.js --detectOpenHandles --coverage",
+    "eslint": "npx eslint .",
+    "eslint:fix": "npx eslint --fix ."
   },
   "keywords": [],
   "author": "",
@@ -13,6 +17,7 @@
   "devDependencies": {
     "eslint": "^8.16.0",
     "eslint-config-airbnb-base": "^15.0.0",
-    "eslint-plugin-import": "^2.26.0"
+    "eslint-plugin-import": "^2.26.0",
+    "jest": "28.1.0"
   }
 }

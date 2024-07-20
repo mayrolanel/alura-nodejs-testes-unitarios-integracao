@@ -1,4 +1,4 @@
-import Item from '../item.js';
+import Item from '../../../carrinho/item.js';
 
 describe('Itens', () => {
   it('Deve ter 3 campos: nome, valor e quantidade', () => {

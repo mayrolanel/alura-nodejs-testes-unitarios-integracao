@@ -1,5 +1,5 @@
-// eslint-disable-next-line import/extensions
-import { somaHorasExtras, calculaDescontos } from '../index.js';
+import { describe, it, expect } from '@jest/globals';
+import { somaHorasExtras, calculaDescontos } from '../../../index.js';
 
 describe('Calculo de folha', () => {
   it('deve fazer a soma das horas extras', () => {

@@ -1,5 +1,6 @@
-import Carrinho from '../carrinho';
-import Item from '../item';
+import { describe, it, expect } from '@jest/globals';
+import Carrinho from '../../../carrinho/carrinho.js';
+import Item from '../../../carrinho/item.js';
 
 describe('Carrinho', () => {
   it('deve iniciar vazio', () => {

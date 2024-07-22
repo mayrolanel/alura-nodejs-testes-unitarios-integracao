@@ -25,7 +25,7 @@ describe('Editora', () => {
     expect(dados.nome).toBe(objetoEditora.nome);
   });
 
-  it.only('deve fazer uma simulação de chamada ao BD', () => {
+  it('deve fazer uma simulação de chamada ao BD', () => {
     const editora = new Editora(objetoEditora);
     editora.salvar = jest.fn().mockReturnValue({
       id: 10,
@@ -46,5 +46,12 @@ describe('Editora', () => {
         updated_at: expect.any(String),
       }),
     );
+  });
+
+  test.each([
+    { nome: 'joao' },
+    { nome: 'maria' },
+  ])('Testandooooo %s', (param) => {
+    console.log(param);
   });
 });
